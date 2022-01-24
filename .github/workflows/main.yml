@@ -1,7 +1,7 @@
 name: Mi-Git-tainer
 env:
   Application_name: "myFlask"
-  Package_name: "flask_deploy_ver_${{github_sha}}"
+  Package_name: "flask_deploy_ver_${{ github.sha }}"
 on:
  push: 
   branches:
