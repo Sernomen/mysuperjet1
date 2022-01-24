@@ -2,5 +2,5 @@
 
 
 Status of last Deployment: <br>
-<img src="https://github.com/Sernomen/testing-actions/workflows/Mi-Git-tainer/badge.svg?branch=master"><br>
+<img src="https://github.com/Sernomen/mysuperjet1/workflows/Mi-Git-tainer/badge.svg?branch=master"><br>
 
