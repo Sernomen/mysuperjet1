@@ -1,7 +1,7 @@
 name: Mi-Git-tainer
 env:
   Application_name: "myFlask"
-  Deploy_Package_name: "flask_deploy_ver_${{ github.sha }}"
+  Package_name: "flask_deploy_ver_${{ github.sha }}"
 on:
  push: 
   branches:
@@ -20,8 +20,15 @@ jobs:
         echo "Hello Message1"
         echo "Hello Message2"
         echo "Application_name: ${{ env.Application_name }}"
+    - name: list curren folder
+      run: ls -la
 
-
+    - name: Git clone my repo
+      uses: actions/checkout@v1
+    - name: list curren folder
+      run: ls -la
+      
+      
   my_deploy:
     runs-on: ubuntu-latest
    
@@ -29,4 +36,9 @@ jobs:
     - name: Print Hello Message if Deploy
       run: echo "Hello world from Deploy job"
     - name: Printing Deployment package
-      run: echo "Deploy package name is ${{ env.Deploy_Package_name }}"
+      run: echo "Deploy package name is ${{ env.Package_name }}"
+      
+    - name: Lets test some packages if the are here 1
+      run: aws --version
+    - name: Lets test some packages if the are here 2
+      run: zip --version
